@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .navbar{
+        display:flex;
+        justify-content: space-around;
+        background:lightgray;
+        align-items: center;
+        font-size: large;
+        border-radius: 10px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        background:lightcoral;
+        padding-bottom: 20px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <h4>color flipper</h4>
+            <div class="links">
+                <a href="index.html">simple</a>
+                <a href="hex.html">hex</a>
+            </div>
+        </div>
+    </nav>
+        <main>
+        <div class="container">    
+        <h2>background color:<span class="color">red</span></h2>
+        <button id="btn" class="btnn">change-color</button>
+    </div>    
+    </main>
+</body>
+<script>
+    const colors = ["red","blue","green","yellow"];
+
+    const btn = document.getElementById("btn");
+    const color = document.querySelector(".color")
+    
+    let colorIndex = 0;    
+
+    btn.addEventListener("click",function(){
+    document.body.style.backgroundColor = colors[colorIndex];
+    color.textContent = colors[colorIndex];
+    colorIndex++;
+    if(colorIndex>= colors.length){
+        colorIndex = 0;
+    }
+    }) 
+</script>
+</html> 

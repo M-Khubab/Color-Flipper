@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav-center{
+        display:flex;
+        justify-content: space-around;
+        background:lightgray;
+        align-items: center;
+        font-size: large;
+        border-radius: 10px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        background:lightcoral;
+        padding-bottom: 20px;
+        border-radius: 10px;
+    }
+
+
+</style>
+<body>
+    <nav></nav>
+        <div class="nav-center">
+            <h4>color flipper</h4>
+            <ul>
+                <li>
+                    <a href="index.html">simple</a>
+                </li>
+                <li>
+                    <a href="hex.html">hex</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <main>
+      <div class="container">
+        <h2>background color:<span class="color">
+          #f1f5f8  
+        </span> </h2>
+        <button class="btn btn-hero" id="btn">Click me</button>
+
+      </div>
+    </main>
+</body>
+<script src="hex.js"></script>
+</html>
